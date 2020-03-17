@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BooksForm = () => {
+const BooksForm = (dispatch) => {
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
     return (
         <form>
@@ -13,7 +13,9 @@ const BooksForm = () => {
                   ))
                 }
             </select>
-            <button type="submit">Submit</button>
+            <button type="submit" onClick={() => dispatch({
+                type: 'CREATE_BOOK',
+            })}>Submit</button>
         </form>
     );
 };
