@@ -1,4 +1,5 @@
 /* eslint-disable react/require-default-props */
+/* eslint arrow-parens: [2, "as-needed"] */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -15,7 +16,7 @@ const BookList = ({ books }) => (
       </tr>
     </thead>
     <tbody>
-      {books.map((book) => (
+      {books.map(book => (
         <Book key={book.id} book={book} />
       ))}
     </tbody>
@@ -26,7 +27,7 @@ BookList.defaultPropTypes = {
   books: [],
 };
 
-const mapStateToProps = (state) => ({ books: state.books });
+const mapStateToProps = state => ({ books: state.books });
 
 BookList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object),
