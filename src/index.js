@@ -5,9 +5,8 @@ import App from './components/App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers';
-import * as serviceWorker from './serviceWorker';
 
-const generateId = () => parseInt(Math.random() *1000);
+const generateId = () => parseInt(Math.random() *1000).toString();
 const initialState = {
     books: [
         {
@@ -29,5 +28,3 @@ const initialState = {
 }
 const store = createStore(rootReducer,initialState);
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
-
-serviceWorker.unregister();

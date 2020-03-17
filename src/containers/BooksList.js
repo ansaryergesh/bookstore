@@ -27,4 +27,8 @@ BookList.defaultPropTypes = {
 
 const mapStateToProps = state => ({books: state.books});
 
+BookList.propTypes = {
+    books: PropTypes.arrayOf(PropTypes.object),
+};
+
 export default connect(mapStateToProps)(BookList);
