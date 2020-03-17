@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Book from '../components/Books';
+import Book from '../components/Book';
 
-const BookList = ({books}) => {
+const BookList = ({books}) => (
     <table>
         <thead>
             <tr>
@@ -19,7 +19,7 @@ const BookList = ({books}) => {
             ))}
         </tbody>
     </table>
-};
+);
 
 BookList.defaultPropTypes = {
     books: [],
