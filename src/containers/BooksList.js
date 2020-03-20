@@ -3,11 +3,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import removeBook from '../actions';
+import { removeBook } from '../actions';
 import Book from '../components/Book';
 
 const BookList = ({ books, removeBook }) => {
-  const handleRemove = book => {
+  const handleRemoveBook = book => {
     removeBook(book);
   };
 
@@ -23,7 +23,7 @@ const BookList = ({ books, removeBook }) => {
       </thead>
       <tbody>
         {books.map(book => (
-          <Book key={book.id} book={book} removeBook={handleRemove} />
+          <Book key={book.id} book={book} removeBook={handleRemoveBook} />
         ))}
       </tbody>
     </table>
