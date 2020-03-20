@@ -17,16 +17,27 @@ class BooksForm extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.createBook({
+      id: generateId(),
+      title: this.state.title,
+      category: this.state.category,
+    });
+  }
+
+
   render() {
     const { title, category } = this.state;
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input type="textbox" name="title" value={title} placeholder="Book Title" onChange={this.handleChange} />
         <select className="category" name="category" value={category} onChange={this.handleChange}>
           {
