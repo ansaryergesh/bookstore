@@ -28,11 +28,13 @@ class BooksForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.createBook({
-      id: generateId(),
-      title: this.state.title,
-      category: this.state.category,
-    });
+    if ((this.state.title).length !== 0 && (this.state.category).length !== 0) {
+      this.props.createBook({
+        id: generateId(),
+        title: this.state.title,
+        category: this.state.category,
+      });
+    }
   }
 
 
