@@ -44,6 +44,7 @@ class BooksForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <input type="textbox" name="title" value={title} placeholder="Book Title" onChange={this.handleChange} />
         <select className="category" name="category" value={category} onChange={this.handleChange}>
+          <option disabled selected>Choose category</option>
           {
                   categories.map((val, index) => (
                     <option key={index} value={val}>{val}</option>
