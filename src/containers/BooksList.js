@@ -14,6 +14,7 @@ const BookList = ({ books }) => (
         <th>ID</th>
         <th>Title</th>
         <th>Category</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
