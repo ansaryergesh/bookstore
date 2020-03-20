@@ -16,7 +16,7 @@ class BooksForm extends Component {
     super();
     this.state = {
       title: '',
-      category: '',
+      category: categories[0],
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -36,6 +36,11 @@ class BooksForm extends Component {
         category: this.state.category,
       });
     }
+
+    this.setState({
+      title: '',
+      category: categories[0],
+    });
   }
 
 
@@ -45,7 +50,7 @@ class BooksForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <input type="textbox" name="title" value={title} placeholder="Book Title" onChange={this.handleChange} />
         <select className="category" name="category" value={category} onChange={this.handleChange}>
-          <option disabled selected>Choose category</option>
+          <option disabled>Choose category</option>
           {
                   categories.map((val, index) => (
                     <option key={index} value={val}>{val}</option>
