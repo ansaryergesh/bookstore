@@ -9,15 +9,19 @@ const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learnin
 const generateId = () => parseInt(Math.random() * 1000, 10).toString();
 
 class BooksForm extends Component {
-  state = {
-    title: '',
-    category: '',
+  constructor() {
+    super();
+    this.state = {
+      title: '',
+      category: '',
+    };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
-    this.setState = ({ [e.target.id]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   }
-
 
   render() {
     const { title, category } = this.state;
