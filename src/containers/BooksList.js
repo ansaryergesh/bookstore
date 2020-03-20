@@ -2,8 +2,9 @@
 /* eslint arrow-parens: [2, "as-needed"] */
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-
+import createBook from '../actions/index';
 import Book from '../components/Book';
 
 const BookList = ({ books }) => (
@@ -28,6 +29,8 @@ BookList.defaultPropTypes = {
 };
 
 const mapStateToProps = state => ({ books: state.books });
+
+// const mapDispatchToProps = dispatch => bindActionCreators({ createBook, dispatch });
 
 BookList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object),
