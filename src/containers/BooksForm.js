@@ -3,6 +3,7 @@
 /* eslint-disable react/state-in-constructor */
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable react/no-array-index-key */
+/* eslint arrow-parens: [2, "as-needed"] */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
@@ -61,8 +62,8 @@ Submit
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  createBook: (book) => dispatch(createBook(book)),
+const mapDispatchToProps = dispatch => ({
+  createBook: book => dispatch(createBook(book)),
 });
 
 export default connect(null, mapDispatchToProps)(BooksForm);
