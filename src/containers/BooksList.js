@@ -18,6 +18,14 @@ const BookList = ({
     filterChange(filter);
   };
 
+  const filterBooks = filter => {
+    if (filter === 'All') {
+      return books;
+    }
+    const filtered = books.filter(book => book.category === filter);
+    return filtered;
+  };
+
 
   return (
     <div>
@@ -32,7 +40,7 @@ const BookList = ({
           </tr>
         </thead>
         <tbody>
-          {books.map(book => (
+          {filterBooks.map(book => (
             <Book key={book.id} book={book} removeBook={handleRemoveBook} />
           ))}
         </tbody>
@@ -45,7 +53,7 @@ BookList.defaultPropTypes = {
   books: [],
 };
 
-const mapStateToProps = state => ({ books: state.books });
+const mapStateToProps = state => ({ books: state.books, filter: state.filter });
 
 const mapDispatchToProps = dispatch => ({ removeBook: book => dispatch(removeBook(book)) });
 
