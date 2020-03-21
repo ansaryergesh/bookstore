@@ -16,10 +16,10 @@ const BookList = ({ books, removeBook }) => {
     filterChange(filter);
   };
 
+
   return (
     <div>
       <CategoryFilter />
-
       <table className="bookTable">
         <thead>
           <tr>
