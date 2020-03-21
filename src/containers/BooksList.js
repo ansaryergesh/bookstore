@@ -3,12 +3,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBook } from '../actions';
+import { removeBook, filterChange } from '../actions';
 import Book from '../components/Book';
 
 const BookList = ({ books, removeBook }) => {
   const handleRemoveBook = book => {
     removeBook(book);
+  };
+
+  const handleFilterChange = filter => {
+    filterChange(filter);
   };
 
   return (
