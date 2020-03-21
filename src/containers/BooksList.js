@@ -7,7 +7,9 @@ import { removeBook, filterChange } from '../actions';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 
-const BookList = ({ books, removeBook }) => {
+const BookList = ({
+  books, removeBook, filterChange, filter,
+}) => {
   const handleRemoveBook = book => {
     removeBook(book);
   };
