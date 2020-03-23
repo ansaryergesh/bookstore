@@ -6,4 +6,9 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   font-family: Montserrat;
+  background-color: #3e3e3e11;
+}
+
+button {
+  cursor: pointer;
 }

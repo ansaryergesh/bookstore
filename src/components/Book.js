@@ -11,33 +11,37 @@ const Book = ({ book, removeBook }) => {
 
   return (
     <div className="books-Block">
-      <p className="bookCategory">{book.category}</p>
-      <h2 className="bookTitle">{book.title}</h2>
-      <p className="bookAuthor">Suzanne Collins</p>
-      <div className="bookButtons">
-        <button className="comment" type="submit">
+      <div>
+        <p className="bookCategory">{book.category}</p>
+        <h2 className="bookTitle">{book.title}</h2>
+        <p className="bookAuthor">Suzanne Collins</p>
+        <div className="bookButtons">
+          <button className="comment" type="submit">
           Comments
-        </button>
-        <button className="remove" type="submit" onClick={handleRemoveBook}>
+          </button>
+          <button className="remove" type="submit" onClick={handleRemoveBook}>
           Remove
-        </button>
-        <button className="edit" type="submit">
+          </button>
+          <button className="edit" type="submit">
           Edit
-        </button>
+          </button>
+        </div>
       </div>
 
       <div className="books-Other">
-        <img src={loader} alt="Loader" />
-        <div className="info-1">
-          <p className="percent">65%</p>
-          <p className="status">completed</p>
+        <div className="bookRate">
+          <img src={loader} alt="Loader" />
+          <div className="info-1">
+            <p className="percent">65%</p>
+            <p className="status">Completed</p>
+          </div>
         </div>
-        <div>
+        <div className="bookChapter">
           <div className="info-2">
             <p className="current">CURRENT CHAPTER</p>
-            <p className="chapter">CHAPTER 17</p>
+            <p className="chapter">Chapter 17</p>
           </div>
-          <p className="btnProgress">UPDATE PROGRESS</p>
+          <button className="btnProgress">Update Progress</button>
         </div>
       </div>
     </div>
