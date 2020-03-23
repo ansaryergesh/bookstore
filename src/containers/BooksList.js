@@ -14,14 +14,10 @@ const BookList = ({
     removeBook(book);
   };
 
-  const handleFilterChange = event => {
-    filterChange(event.target.value);
-  };
-
 
   return (
     <div>
-      <CategoryFilter filterChange={handleRemoveBook} />
+      <CategoryFilter filterChange={filterChange} />
       <table className="bookTable">
         <thead>
           <tr>
@@ -52,6 +48,7 @@ BookList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object),
   removeBook: PropTypes.func.isRequired,
   filterChange: PropTypes.func.isRequired,
+  filter: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);

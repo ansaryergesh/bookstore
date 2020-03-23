@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
-const CategoryFilter = (props) => {
+const CategoryFilter = ({ filterChange }) => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-
-  const { filterChange, filter } = props;
+  const handleFilterChange = (event) => {
+    filterChange(event.target.value);
+  };
   return (
     <select
       className="filterSelect"
-      onChange={filterChange}
-      value={filter}
+      onChange={handleFilterChange}
     >
       <option value="All">All</option>
       { categories.map((category) => (
