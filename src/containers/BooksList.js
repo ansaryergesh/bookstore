@@ -7,6 +7,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { filterChange, removeBook } from '../actions';
 import Book from '../components/Book';
+import './BooksList.scss';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BookList = ({
@@ -25,10 +26,11 @@ const BookList = ({
   };
 
   return (
-    <div>
+    <div className="Container">
       <div className="Header">
+
         <div className="leftBlock">
-          <h1>Bookstore CMS</h1>
+          <h1 className="headerLogo">Bookstore CMS</h1>
           <p>Books</p>
           <CategoryFilter filterChange={filterChange} />
         </div>
@@ -37,6 +39,7 @@ const BookList = ({
             <FontAwesomeIcon icon={faUser} />
           </div>
         </div>
+
       </div>
       <div className="bookLists">
 
