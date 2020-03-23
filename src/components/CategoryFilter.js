@@ -1,10 +1,11 @@
+/* eslint arrow-parens: [2, "as-needed"] */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ filterChange }) => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-  const handleFilterChange = (e) => {
+  const handleFilterChange = e => {
     filterChange(e.target.value);
   };
   return (
@@ -14,7 +15,7 @@ const CategoryFilter = ({ filterChange }) => {
       onChange={handleFilterChange}
     >
       <option value="All">All</option>
-      { categories.map((category) => (
+      { categories.map(category => (
         <option key={category} value={category}>{category}</option>
       ))}
     </select>
