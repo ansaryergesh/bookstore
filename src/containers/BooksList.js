@@ -14,6 +14,13 @@ const BookList = ({
     removeBook(book);
   };
 
+  const booksFilter = filter => {
+    if (filter === 'All') {
+      return books;
+    }
+    const opt = books.filter(val => val.category === filter);
+    return opt;
+  };
 
   return (
     <div>
@@ -28,7 +35,7 @@ const BookList = ({
           </tr>
         </thead>
         <tbody>
-          { books.map(book => (
+          { booksFilter(filter).map(book => (
             <Book book={book} key={book.id} removeBook={handleRemoveBook} />))}
         </tbody>
       </table>
