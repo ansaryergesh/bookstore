@@ -35,7 +35,7 @@ const BookList = ({
           </tr>
         </thead>
         <tbody>
-          { booksFilter('All').map(book => (
+          { booksFilter(filter).map(book => (
             <Book book={book} key={book.id} removeBook={handleRemoveBook} />))}
         </tbody>
       </table>
