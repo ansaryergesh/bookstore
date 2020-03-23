@@ -8,11 +8,36 @@ const Book = ({ book, removeBook }) => {
   };
 
   return (
-    <tr className="bookList">
-      <td>{book.title}</td>
-      <td>{book.category}</td>
-      <td><button onClick={handleRemoveBook}>Delete</button></td>
-    </tr>
+    <div className="books-Block">
+      <p className="bookCategory">{book.category}</p>
+      <h2 className="bookTitle">{book.title}</h2>
+      <p className="bookAuthor">Suzanne Collins</p>
+      <div className="bookButtons">
+        <button className="comment" type="submit">
+          Comments
+        </button>
+        <button className="remove" type="submit" onClick={handleRemoveBook}>
+          Remove
+        </button>
+        <button className="edit" type="submit">
+          Edit
+        </button>
+      </div>
+
+      <div className="books-Other">
+        <div className="info-1">
+          <p className="percent">65%</p>
+          <p className="status">completed</p>
+        </div>
+        <div>
+          <div className="info-2">
+            <p className="current">CURRENT CHAPTER</p>
+            <p className="chapter">CHAPTER 17</p>
+          </div>
+          <p className="btnProgress">UPDATE PROGRESS</p>
+        </div>
+      </div>
+    </div>
   );
 };
 
