@@ -1,7 +1,9 @@
+@import '../variables/variable';
 $val: 50px;
 
 .App {
   margin: $val;
+  background-color: $main-color;
 }
 
 .bookTable tbody {}
