@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ filterChange }) => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-  const handleFilterChange = (event) => {
-    filterChange(event.target.value);
+
+  const handleFilterChange = (e) => {
+    filterChange(e.target.value);
   };
   return (
     <select
       className="filterSelect"
+      name="category"
       onChange={handleFilterChange}
     >
       <option value="All">All</option>

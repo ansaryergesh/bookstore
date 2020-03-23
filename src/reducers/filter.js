@@ -1,5 +1,5 @@
-const initialState = { filter: 'All' };
-const filterReducer = (state = initialState, action) => {
+// const initialState = { filter: 'All' };
+const filterReducer = (state = 'All', action) => {
   const { type } = action;
   switch (type) {
     case 'CHANGE_FILTER':
