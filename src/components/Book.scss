@@ -89,3 +89,63 @@
         }
     }
 }
+
+.newBook {
+    margin: 30px 100px;
+    padding: 32px;
+
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #1212126f;
+    }
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    button {
+        margin-top: 10px;
+        background-color: $main-color;
+        padding: 10px 15px;
+        letter-spacing: 0.5px;
+        color: white;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 3px;
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 1rem 2rem rgba(black, .2);
+        }
+    }
+
+    input,
+    select {
+        padding: 10px 15px;
+        border-radius: 3px;
+    }
+
+    input {
+        width: 50%;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    select {
+        width: 25%;
+        border: none;
+    }
+
+    button {
+        width: 15%;
+    }
+
+
+
+}
