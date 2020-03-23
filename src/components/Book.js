@@ -1,6 +1,8 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/prop-types */
 import React from 'react';
+import './Book.scss';
+import loader from './loader.png';
 
 const Book = ({ book, removeBook }) => {
   const handleRemoveBook = () => {
@@ -25,6 +27,7 @@ const Book = ({ book, removeBook }) => {
       </div>
 
       <div className="books-Other">
+        <img src={loader} alt="Loader" />
         <div className="info-1">
           <p className="percent">65%</p>
           <p className="status">completed</p>
