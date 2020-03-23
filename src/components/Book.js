@@ -9,7 +9,6 @@ const Book = ({ book, removeBook }) => {
 
   return (
     <tr className="bookList">
-      <td>{book.id}</td>
       <td>{book.title}</td>
       <td>{book.category}</td>
       <td><button onClick={handleRemoveBook}>Delete</button></td>
