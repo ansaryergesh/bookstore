@@ -1,32 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
+const CategoryFilter = (props) => {
+  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-class CategoryFilter extends Component {
-  constructor() {
-    super();
-    this.handleChangeFilter = this.handleChangeFilter.bind(this);
-  }
+  const { filterChange, filter } = props;
+  return (
+    <select
+      className="filterSelect"
+      onChange={filterChange}
+      value={filter}
+    >
+      <option value="All">All</option>
+      { categories.map((category) => (
+        <option key={category} value={category}>{category}</option>
+      ))}
+    </select>
+  );
+};
 
-  handleChangeFilter(e) {
-    this.setState({ [e.target.name]: e.target.value });
-  }
-
-  render() {
-    const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-    return (
-      <select
-        className="filterSelect"
-        onChange={this.handleChangeFilter}
-      >
-        <option value="All">All</option>
-        { categories.map((category) => (
-          <option key={category} value={category}>{category}</option>
-        ))}
-      </select>
-    );
-  }
-}
+CategoryFilter.propTypes = {
+  filterChange: PropTypes.func.isRequired,
+};
 
 
 export default CategoryFilter;
