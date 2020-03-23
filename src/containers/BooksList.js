@@ -3,6 +3,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { filterChange, removeBook } from '../actions';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
@@ -31,7 +33,9 @@ const BookList = ({
           <CategoryFilter filterChange={filterChange} />
         </div>
         <div className="rightBlock">
-          Logo
+          <div className="userLogo">
+            <FontAwesomeIcon icon={faUser} />
+          </div>
         </div>
       </div>
       <div className="bookLists">
