@@ -1,0 +1,65 @@
+@import '../variables/variable';
+
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    border-bottom: .1px solid #f0e9e9;
+    font-size: 13px;
+    background-color: white;
+
+    select {
+        border: none;
+        background-color: #ffffff;
+        font-size: 13px;
+        padding-left: 30px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .headerLogo {
+        font-size: 30px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+
+        letter-spacing: normal;
+        color: $main-color;
+    }
+
+    .leftBlock {
+        display: flex;
+        align-items: center;
+
+
+        h1,
+        p {
+            margin-right: 55px;
+        }
+
+        p {
+            text-transform: uppercase;
+
+            line-height: normal;
+            letter-spacing: 1.9px;
+            color: #121212;
+        }
+
+    }
+
+    .rightBlock {
+        .userLogo {
+            padding: 10px;
+            border: solid 1px #e8e8e8;
+            border-radius: 60%;
+            font-size: 17px;
+
+            color: $main-color;
+        }
+    }
+}

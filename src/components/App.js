@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './App.css';
+import './App.scss';
 import BooksForm from '../containers/BooksForm';
 import BooksList from '../containers/BooksList';
 

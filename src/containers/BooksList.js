@@ -3,8 +3,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { filterChange, removeBook } from '../actions';
 import Book from '../components/Book';
+import './BooksList.scss';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BookList = ({
@@ -23,22 +26,28 @@ const BookList = ({
   };
 
   return (
-    <div>
-      <CategoryFilter filterChange={filterChange} />
-      <table className="bookTable">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
+    <div className="Container">
+      <div className="Header">
+
+        <div className="leftBlock">
+          <h1 className="headerLogo">Bookstore CMS</h1>
+          <p>Books</p>
+          <CategoryFilter filterChange={filterChange} />
+        </div>
+        <div className="rightBlock">
+          <div className="userLogo">
+            <FontAwesomeIcon icon={faUser} />
+          </div>
+        </div>
+
+      </div>
+      <div className="bookLists">
+
+        <div className="bookSection">
           { booksFilter(filter).map(book => (
             <Book book={book} key={book.id} removeBook={handleRemoveBook} />))}
-        </tbody>
-      </table>
+        </div>
+      </div>
     </div>
   );
 };
