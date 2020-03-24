@@ -1,150 +1,145 @@
-@import '../variables/variable';
+@import "../variables/variable";
 
 .books-Block {
-    margin: 30px 100px;
-    padding: 32px;
-    border: solid 1px #e8e8e8;
-    background-color: white;
-    line-height: .5;
-    display: flex;
-    justify-content: space-between;
+  margin: 30px 100px;
+  padding: 32px;
+  border: solid 1px #e8e8e8;
+  background-color: white;
+  line-height: 0.5;
+  display: flex;
+  justify-content: space-between;
 
-    p {
-        font-size: 14px;
-    }
+  p {
+    font-size: 14px;
+  }
 
-    .bookCategory {
-        color: #1212126f;
-        font-weight: 700;
-    }
+  .bookCategory {
+    color: #1212126f;
+    font-weight: 700;
+  }
 
-    .bookAuthor {
-        color: $main-color;
-        margin-bottom: 25px;
-    }
+  .bookAuthor {
+    color: $main-color;
+    margin-bottom: 25px;
+  }
 }
 
 .bookButtons {
-    button {
-        border: none;
-        margin-right: 25px;
-        padding: 5px;
-        color: $main-color;
-        background-color: white;
+  button {
+    border: none;
+    margin-right: 25px;
+    padding: 5px;
+    padding-left: 0;
+    color: $main-color;
+    background-color: white;
 
-        &:hover {
-            background-color: rgba(162, 156, 156, 0.034);
-        }
+    &:hover {
+      background-color: rgba(162, 156, 156, 0.034);
     }
+  }
 }
 
-
 .books-Other {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .bookRate {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    margin-right: 150px;
+    line-height: 0.7;
 
-    .bookRate {
-        display: flex;
-        align-items: center;
-        margin-right: 150px;
-        line-height: .7;
-
-        img {
-            margin-right: 25px;
-            width: 70px;
-            height: 70px;
-        }
-
-        .percent {
-            font-size: 25px;
-        }
-
-
+    img {
+      margin-right: 25px;
+      width: 70px;
+      height: 70px;
     }
+
+    .percent {
+      font-size: 25px;
+    }
+  }
 }
 
 .status,
 .current {
-    font-size: 14px;
-    color: rgb(204, 198, 198);
+  font-size: 14px;
+  color: rgb(204, 198, 198);
 }
 
 .bookChapter {
-    margin-right: 25px;
+  margin-right: 25px;
 
-    .btnProgress {
-        margin-top: 10px;
-        background-color: $main-color;
-        padding: 10px 15px;
-        letter-spacing: 0.5px;
-        color: white;
-        border: none;
-        text-transform: uppercase;
-        border-radius: 3px;
+  .btnProgress {
+    margin-top: 10px;
+    background-color: $main-color;
+    padding: 10px 15px;
+    letter-spacing: 0.5px;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 3px;
 
-        &:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 1rem 2rem rgba(black, .2);
-        }
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 1rem 2rem rgba(black, 0.2);
     }
+  }
 }
 
 .newBook {
-    margin: 100px 90px;
+  margin: 100px 90px;
 
-    h2 {
-        font-size: 20px;
-        font-weight: bold;
-        color: #1212126f;
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1212126f;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  button {
+    margin-top: 10px;
+    background-color: $main-color;
+    padding: 10px 15px;
+    letter-spacing: 0.5px;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 3px;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 1rem 2rem rgba(black, 0.2);
     }
+  }
 
-    form {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  input,
+  select {
+    padding: 10px 15px;
+    border-radius: 3px;
+  }
+
+  input {
+    width: 50%;
+    border: none;
+
+    &:focus {
+      outline: none;
     }
+  }
 
-    button {
-        margin-top: 10px;
-        background-color: $main-color;
-        padding: 10px 15px;
-        letter-spacing: 0.5px;
-        color: white;
-        border: none;
-        text-transform: uppercase;
-        border-radius: 3px;
+  select {
+    width: 25%;
+    border: none;
+  }
 
-        &:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 1rem 2rem rgba(black, .2);
-        }
-    }
-
-    input,
-    select {
-        padding: 10px 15px;
-        border-radius: 3px;
-    }
-
-    input {
-        width: 50%;
-        border: none;
-
-        &:focus {
-            outline: none;
-        }
-    }
-
-    select {
-        width: 25%;
-        border: none;
-    }
-
-    button {
-        width: 15%;
-    }
-
-
-
+  button {
+    width: 15%;
+  }
 }
